@@ -1,0 +1,246 @@
+/* Use an asterisk to target everything 
+*{
+    margin:0;
+    padding:0;
+    
+}
+*/
+
+body {
+  background-color: #f4f4f4;
+  color: #555555;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+
+  /* Same implmention as above */
+  font: normal 16px Arial, Helvetica, sans-serif;
+
+  line-height: 1.6em; /*adds space between lines*/
+  margin:0;
+}
+
+/*Targets only the anchor link elements in the webpage*/
+a{
+    text-decoration: none;  /*removes the txt-underline for links*/
+    color:#000000;        /*changes all links from default blue to black*/
+
+}
+/*Targets links hover state*/
+a:hover{
+    color: red;
+}
+/*When you click on it, it will flash briefly*/
+a:active{
+    color:green;  /*briefly flashes green when clicked on*/
+
+}
+
+
+/* Create a class called container to reuse*/
+.container {
+    width:80%; /* set div width relative to screen width*/
+    margin:auto  /*add equal spacing on all sides*/
+}
+
+/* Global styling to all buttons on our webpge*/
+.button{
+    background-color: #333;
+    color: #fff;  /* FFFFFF is white */
+    padding: 10px 15px;   /*adds padding 10px top bottom and 15px left right*/
+    border: none;
+}
+
+/*Create a hover effect for class: button elements*/
+.button:hover{
+    background: lightgreen;
+    color: #fff;
+}
+
+.clr{
+    clear: both;
+}
+
+
+/*To target a class, use a dot .*/
+.box-1{
+    background-color: #333;
+    color: #fff;
+
+    /* Add custom border around div<> content*/
+    border-right: 5px blue solid;
+    border-left: 5px blue solid;  
+    border-top: 5px blue solid;  
+    border-bottom: 5px blue solid;  
+    /* Same implemention as above */
+    border: 5px blue solid;
+
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style: dotted;
+    
+
+    /*Add padding (space inside the border)*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    /*Add margin (space outside the border)*/
+    margin-top: 20px;
+    margin:20px 0;  /*20px for top/bottom, 0px for left/right */
+
+}
+
+
+/* Target an h1 inside the box-1 class */
+.box-1 h1{
+    font-family: Tahoma;
+    font-weight: 8000;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;;
+
+}
+
+.box-2{
+    border:3px dotted #ccc;
+    padding: 20px;
+    margin:20px 0;
+
+}
+
+/* categories class is the div<> object itself*/
+.categories{
+    border:1px #ccc solid;
+    padding:10px;
+    border-radius: 15px; /* sets round border edges */
+}
+
+/* targets h2<> elements (header)*/
+.categories h2{
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+.categories ul{
+    padding:0;
+    list-style: none; /*Change bullet-point style for lists.*/
+    padding-left: 16px;
+}
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    list-style-image: url(../images/check.png);
+}
+
+.my-form{
+    padding: 20px;
+}
+
+/* form-group class targets each element within the form itself */
+.my-form .form-group{
+    padding-bottom:15px; /*adds 15px padding under each element in class form-group*/
+
+}
+
+/*Targets all the label elements in the form*/
+.my-form label{
+   display:block;  /*puts all the labels on their own block*/
+}
+
+/*Targets input of type text only and textarea */
+.my-form input[type = "text"], .my-form textarea{
+    padding: 8px;
+    width: 100%;   /*stretches input block to 100% of screen width*/
+}
+
+.block{
+    float: left;
+    width: 33.3%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;  /*Readjusts width taking into account extra padding*/
+}
+
+/* Learn how to distribute space for elements on a single block*/
+#main-block{
+    float:left;
+    width:70%;
+    padding: 15px;
+    box-sizing: border-box; /*Readjusts width taking into account extra padding*/
+}
+
+/* Learn how to distribute space for elements on a single block*/
+#sidebar{
+    float:right;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box; /*Readjusts width taking into account extra padding*/
+}
+
+/* By default, position is static*/
+.p-box{
+    width:800px;
+    height:500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    position:relative;  /*Need to set parent element positioned relative for child elements to be absolute*/ 
+    background-image: url(../images/universe_background.jpg);  /*Add a background image to this element*/
+    background-repeat: no-repeat;  /* No repeating images*/
+    background-position: 100px 200px;  /*reset image position*/
+    background-position: center top;
+}
+
+.p-box h1{
+    position: absolute;  /*position absolute to parent element */
+    top:100px;
+    left: 200px;
+}
+
+.p-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+
+}
+
+/*How does fixed position work? Fixed elements do not move where ever you are on webpage*/
+/* Used for nav bars and social media links*/
+.fix-me{
+    position:fixed;
+    top:400px;
+}
+
+
+/*PSEUDO ELEMENTS*/
+/*Target the first child list element in te my-list class*/
+.my-list li:first-child{
+    background: red;
+
+
+}
+/*Target the last child list element in te my-list class*/
+.my-list li:last-child{
+    background: blue;
+
+
+}
+/*Target an nth child */
+.my-list li:nth-child(5){
+    background: yellow;
+
+
+}
+/*Target all even elements */
+.my-list li:nth-child(even){
+    background: grey;
+
+
+}
